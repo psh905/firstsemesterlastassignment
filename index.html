@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+  <head>
+     <script
+   src="http://code.jquery.com/jquery-3.5.0.js"
+   integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+   crossorigin="anonymous"></script>
+
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>자기소개 과제(박상혁) -html</title>
+    <meta charset="utf-8">
+    <style>
+      h1 {
+        color:Yellow;
+
+
+        text-align: center;
+        border-bottom:3px solid silver;
+        margin:0;
+        padding:20px;
+
+
+      }
+      ol{
+        border-right:5px solid gray;
+        width:120px;
+        margin:0;
+        padding:20px;
+      }
+      
+      body{
+        padding-left:10px;
+        font-family: 'Baloo Tammudu 2', cursive;
+        background-color:white;
+      }
+      #picture{
+        padding-left:15px;
+        
+        
+      }
+      #grid{
+        display:grid;
+        grid-template-columns:450px 1fr;
+      }
+      #right{
+        border-left: 1px solid gray;
+        padding-left:30px;
+      }
+      body {
+
+        margin: 0px;
+
+        background-image: url("배경사진2.jpg") ;
+        background-repeat:no-repeat;
+        background-size:100% 145%;
+        
+
+
+
+    }
+    .panel-footer{
+      background : greenyellow;
+      color : black;
+      position: fixed; 
+      bottom: 0; 
+      width: 100%;
+
+
+
+    }
+
+      </style>
+
+
+  </head>
+
+
+  <body>
+    <div class="container-fluid">
+
+
+    <h1><a href="index.html">자기소개 index</a></h1>
+    
+    
+    <input id="redblue" type="button" value="빨강" onclick="
+    if (document.querySelector('#redblue').value === '빨강'){
+    document.querySelector('body').style.color='red';
+    document.querySelector('#redblue').value ='파랑';
+    var alist = document.querySelectorAll('a');
+    var i=0 ;
+    while(i < alist.length){
+    console.log(alist[i]);
+    alist[i].style.color='red';
+    i= i+1 ;
+}
+    }
+    else {document.querySelector('body').style.color='blue';
+    document.querySelector('#redblue').value ='빨강'
+    var alist = document.querySelectorAll('a');
+var i=0 ;
+while(i < alist.length){
+    console.log(alist[i]);
+    alist[i].style.color='yellowgreen';
+    i= i+1 ;
+}
+    }
+    ">
+     <input id="redblue" type="button" value="빨강" onclick="
+     if (this.value === '빨강'){
+     document.querySelector('body').style.color='red';
+     this.value ='파랑';
+     }
+     else {document.querySelector('body').style.color='blue';
+     this.value ='빨강'
+     }
+     ">
+  
+    <input type="button" value="정상" onclick="
+    document.querySelector('body').style.color='black';
+   ">
+        <ul class="nav nav-tabs">
+          <li role="presentation" id="login" onclick="button_click();">전공</a></li>
+          <li role="presentation"><a href="2.html">출신지역</a></li>
+          <li role="presentation"><a href="3.html">나이</a></li>
+          <li role="presentation"><a href="빙고.html">빙고</a></li>
+        </ul>
+        
+      
+        <div id="grid">
+
+
+          <div id="left">
+            <h2 style="color:green;"> 개괄적 소개 </h2>
+
+
+
+       안녕하세요! 멋사 8기로 참여하게된 박상혁이라고 합니다.
+       <br> 아직 상당히 미숙한 수준이지만 노력해보겠습니다!   
+       <div class="js-weather"><h2>날씨창</h2></div>
+      
+
+      </div>
+
+
+
+          <div id="right">
+            <h3>잘 부탁드려요 :) !</h3>
+      
+            <div id="picture">
+              <img src="사진1.jpg" alt="사진1.jpg" class="img-rounded" width=100px>
+              
+            </div>
+
+            <a href="https://www.instagram.com" target="_blank" title="제 인스타아이디입니다!">sanghyukmon</a>
+
+          <p><a class="btn btn-primary btn-lg" href="https://www.instagram.com" role="button">Go to instagram site</a></p>
+            </div>
+
+            <script>
+              function button_click(){
+              const login = document.getElementById("login");
+    
+    var password = "1234";
+    var getpass = prompt("비밀번호를 입력하세요.");
+    
+    
+        if(password == getpass) {
+            alert("로그인 되었습니다.");
+            
+            location.href="1.html"
+        } else {
+            alert("비밀번호가 틀렸습니다.");
+            location.href="index.html"
+        }
+
+              }
+            </script>
+
+
+
+      
+
+      </div>
+      <div class="panel-footer" align="center">made by 박상혁<br>멋쟁이사자처럼8기</div>
+  
+
+    </div>
+    <input id="redblue" type="button" value="빨강" onclick="
+    var target = document.querySelector('body');
+    if (this.value === '빨강'){
+    target.style.color='red';
+    this.value ='파랑';
+    }
+    else {target.style.color='blue';
+    this.value ='빨강'
+    }
+    ">
+    <script src="weather.js"></script>
+
+    <div class="content">
+      <div class="window">
+          <div id="w_clock">
+              <h3>Clock</h3>
+              <h1>00:00:00</h1>
+          </div>
+          <div id="w_stopwatch">
+              <h3>Stopwatch</h3>
+              <h1>00:00</h1>
+              <button id="start">start</button>
+              <button id="reset">reset</button>
+          </div>
+          <div id="w_timer">
+              <h3>Timer</h3>
+              <h1>00:00</h1>
+              <input id="m_timer" type="number">분
+              <input id="s_timer" type="number">초
+
+              <button id="start">start</button>
+              <button id="reset">reset</button>
+          </div>
+      </div>
+      <div class="select">
+
+          <input id ="selectClock" type="radio" name="select" checked>
+          <input id = "selectStopwatch" type="radio" name="select">
+          <input id="selectTimer" type="radio" name="select">
+      </div>
+  </div>
+  <script type="text/javascript" src="tab.js"></script>
+<script type="text/javascript" src="clock.js"></script>
+<script type="text/javascript" src="stopwatch.js"></script>
+<script type="text/javascript" src="timer.js"></script>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://psh905.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+  </body>
+
+</html>
